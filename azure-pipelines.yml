@@ -23,5 +23,11 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'api_test'
+    customCommand: 'npm run api_test'
   displayName: 'Run API tests'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'npm run test'
+  displayName: 'Run UI tests'

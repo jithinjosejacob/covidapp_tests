@@ -4,10 +4,10 @@ class DashboardPage extends BasePage {
 
     get userNameTextBox() { return $("#worrior_username") }
 
-    enterWarriorName(){
+    enterWarriorName(name){
         this.userNameTextBox.waitForDisplayed();
         this.userNameTextBox.scrollIntoView();
-        this.userNameTextBox.setValue('Test');
+        this.userNameTextBox.setValue(name);
         this.clickHyperlink('Create warrior');
     }
 }

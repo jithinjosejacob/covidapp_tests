@@ -108,7 +108,7 @@ exports.config = {
     baseUrl: 'http://localhost',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 30000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
@@ -143,11 +143,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec', 'dot', ['allure', { outputDir: 'allure-results' }], ['allure', {
-        outputDir: './reports/allure-results'
-    }]],
-
-
+    reporters: ['spec',['allure', { outputDir: 'allure-results' }]],
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
